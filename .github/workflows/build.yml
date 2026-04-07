@@ -18,15 +18,12 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '17'
+
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          # 改为 beta 或 master 通道以匹配高版本 Dart
-          channel: 'beta' 
-          # 或者直接指定特定的高版本（如果已知）
-          # flutter-version: '3.19.0' 
-
-
+          flutter-version: '3.19.0' # 根据你的项目需要调整版本
+          channel: 'stable'
 
       - name: Get dependencies
         run: flutter pub get
